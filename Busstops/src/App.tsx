@@ -6,7 +6,7 @@ type ReactSetState<T> = React.Dispatch<React.SetStateAction<T>>
 
 function App() {
 
-  const [position, setPosition] = useState<number>()
+  const [position, setPosition] = useState<Coords>()
 
   function getPosition(setPosition: ReactSetState<Coords>) {
     if ('geolocation' in navigator) {
@@ -21,10 +21,10 @@ function App() {
   }
 
   return (
-    <>
+    <section>
      <button onClick={() => getPosition(setPosition)}>See location</button>
     <p>Your position is {position?.lat} {position?.lon}</p>
-    </>
+    </section>
   )
 }
 
