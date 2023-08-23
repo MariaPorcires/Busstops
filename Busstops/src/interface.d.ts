@@ -17,5 +17,17 @@ interface Data {
     name: string;
   }
 
-
-export type { Coords, Data, StopLocation, Stop }
+/*  interface Departure {
+    name: string;
+    direction: string;
+    time: string;
+  }*/
+interface Departure {
+  Departure: DepartureInfo[]
+}
+interface DepartureInfo {
+  name: string;
+  time: string;
+  direction: string;
+}
+  export type { Data, StopLocation, Coords, Stop, Departure}
